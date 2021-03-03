@@ -1,0 +1,12 @@
+%reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+%wrapper {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding-right: $container-padding;
+  padding-left: $container-padding;
+}

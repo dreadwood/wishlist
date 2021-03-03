@@ -1,0 +1,11 @@
+@mixin transition($args...) {
+  transition-property: $args;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
