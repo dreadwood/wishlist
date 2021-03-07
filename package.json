@@ -1,12 +1,10 @@
 {
-  "name": "demo-gulp",
-  "version": "1.0.0",
-  "description": "Чистая сборка",
+  "name": "gulp-templates",
   "author": "dreadwood",
   "scripts": {
     "build": "gulp build",
     "editorconfig": "editorconfig-checker",
-    "eslint": "eslint src/js/*/*.js",
+    "eslint": "eslint src/js/**/*.js",
     "gh-pages": "push-dir --dir=dist --branch=gh-pages",
     "sprite": "gulp sprite",
     "start": "gulp start",
