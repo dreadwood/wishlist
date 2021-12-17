@@ -2,12 +2,21 @@
 // https://github.com/web-standards-ru/web-standards.ru/blob/master/.stylelintrc.json
 
 module.exports = {
-  extends: 'stylelint-config-htmlacademy',
+  extends: 'stylelint-config-standard-scss',
+  // extends: 'stylelint-config-htmlacademy',
+  overrides: [
+    {
+      files: ["**/*.scss"],
+      customSyntax: "postcss-scss"
+    }
+  ],
   plugins: [
     'stylelint-order',
   ],
   rules: {
+    'color-hex-length': 'long',
     'declaration-no-important': true,
+    'font-family-name-quotes': 'always-unless-keyword',
     'indentation': [2, {
       'ignore': ['inside-parens']
     }],
