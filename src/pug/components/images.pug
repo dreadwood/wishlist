@@ -1,15 +1,12 @@
-mixin picture(className=null, image, width, height, altText)
-  - var path = image.split("@")[0];
-  - var format = image.split(".")[1];
+mixin picture(className, image, width, height, altText)
+  - var fileName = image.split(".")[0];
   picture
-    source(type="image/webp",
-        srcset=`${path}@1x.webp 1x, ${path}@2x.webp 2x`)
-    img(class=className,
-        src=image,
-        srcset=`${path}@2x.${format} 2x`,
-        width=width,
-        height=height,
-        alt=altText)
+    source(type="image/webp" srcset=`${fileName}.webp`)
+    img(class=className
+        src=image
+        width=width || null
+        height=height || null
+        alt=altText || "")
 
 mixin svg(className=null, name, width, height, altText)
   if altText

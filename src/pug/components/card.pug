@@ -9,7 +9,7 @@ mixin card(data)
     .card__grid
       each photo in data.photos
         .card__ratio
-          img.card__img(src=photo alt="")
+          +picture("card__img", photo)
 
     if data.links
       ul.card__info-list
