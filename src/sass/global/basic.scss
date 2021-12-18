@@ -15,7 +15,7 @@ body {
   font-weight: 400;
   font-style: normal;
   text-align: left;
-  color: $color-black;
+  color: $color-text;
   background-color: $color-white;
 }
 
@@ -46,7 +46,8 @@ button {
   cursor: pointer;
 }
 
-picture {
+picture,
+svg {
   flex-shrink: 0;
 }
 

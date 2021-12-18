@@ -6,8 +6,8 @@ module.exports = {
   // extends: 'stylelint-config-htmlacademy',
   overrides: [
     {
-      files: ["**/*.scss"],
-      customSyntax: "postcss-scss"
+      files: ['**/*.scss'],
+      customSyntax: 'postcss-scss'
     }
   ],
   plugins: [
@@ -19,6 +19,17 @@ module.exports = {
     'font-family-name-quotes': 'always-unless-keyword',
     'indentation': [2, {
       'ignore': ['inside-parens']
+    }],
+    'selector-class-pattern': '',
+    'color-hex-case': 'upper',
+    'shorthand-property-no-redundant-values': null,
+    'at-rule-empty-line-before': ['always', {
+      'except': ['after-same-name', 'inside-block'],
+      'ignore': ['after-comment'],
+    }],
+    'rule-empty-line-before': ['always', {
+      'except': ['first-nested', 'inside-block-and-after-rule', 'inside-block'],
+      'ignore': ['after-comment']
     }],
     'at-rule-no-unknown': [true, {
       'ignoreAtRules': [

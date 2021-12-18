@@ -18,11 +18,11 @@ mixin svg(className=null, name, width, height, altText)
         height=height
         role="img"
         aria-label=altText)
-    use(xlink:href=`img/sprite.svg#${name}`)
+      use(xlink:href=`/img/sprite.svg#${name}`)
   else
     svg(class=className
         width=width
         height=height
         focusable="false"
         aria-hidden="true")
-    use(xlink:href=`img/sprite.svg#${name}`)
+      use(xlink:href=`/img/sprite.svg#${name}`)

@@ -1,0 +1,110 @@
+.card {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  font-size: 14px;
+  font-weight: 300;
+  border-top: 1px solid $color-border;
+  border-bottom: 1px solid $color-border;
+  @include tablet {
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+}
+
+.card__top {
+  margin-bottom: 2rem;
+  @include tablet {
+    margin-bottom: 4rem;
+  }
+}
+
+.card__ratio {
+  position: relative;
+  padding-bottom: 60%;
+  overflow: hidden;
+  border-radius: 6px;
+  &:first-child {
+    grid-column: 1 / 4;
+  }
+  &:last-child {
+    grid-column: 2 / 4;
+  }
+}
+
+.card__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card__title {
+  margin-top: 14px;
+  margin-bottom: 0;
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 700;
+  @include tablet {
+    font-size: 4rem;
+  }
+}
+
+.card__desc {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  color: $color-gray;
+}
+
+.card__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+  @include tablet {
+    gap: 1.6rem;
+  }
+}
+
+.card__info {
+  margin-top: 2rem;
+  padding: 20px;
+  background-color: $color-info;
+  border-radius: 6px;
+}
+
+.card__info-title {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.card__info-list {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.card__btn {
+  display: block;
+  margin: 0;
+  padding: 0.4rem 1.5rem;
+  line-height: 2;
+  font-weight: 500;
+  background-color: transparent;
+  border: 1px solid $color-border;
+  border-radius: 6px;
+  &:not([href]) {
+    color: $color-gray;
+  }
+  &[href]:hover,
+  &[href]:focus {
+    border-color: $color-text;
+  }
+}

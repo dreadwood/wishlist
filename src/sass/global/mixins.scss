@@ -3,45 +3,37 @@
   transition-duration: 0.3s;
   transition-property: $args;
 }
-
 @mixin retina {
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     @content;
   }
 }
-
 @mixin mobile-big {
   @media (min-width: $mobile-big-width - 1px) {
     @content;
   }
 }
-
 @mixin tablet {
   @media (min-width: $tablet-width) {
     @content;
   }
 }
-
 @mixin desktop {
   @media (min-width: $desktop-width) {
     @content;
   }
 }
-
 @mixin list-reset {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-
 @mixin hide-scroll {
   scrollbar-width: none;
-
   &::-webkit-scrollbar {
     display: none;
   }
 }
-
 @mixin hack-crop-text($row-count: 3) { // хак для обрезки многострочного текста
   // stylelint-disable property-no-vendor-prefix, value-no-vendor-prefix
   -webkit-box-orient: vertical;
@@ -49,39 +41,32 @@
   display: -webkit-box;
   overflow: hidden;
 }
-
 @mixin wrapper {
   width: 100%;
-  max-width: $container-width;
   margin: 0 auto;
-  padding-right: $desktop-padding;
-  padding-left: $desktop-padding;
-
+  padding-right: $mobile-padding;
+  padding-left: $mobile-padding;
   @include tablet {
     padding-right: $tablet-padding;
     padding-left: $tablet-padding;
   }
-
-  @include mobile {
-    padding-right: $mobile-padding;
-    padding-left: $mobile-padding;
+  @include desktop {
+    max-width: $desktop-width;
+    padding-right: $desktop-padding;
+    padding-left: $desktop-padding;
   }
 }
-
 @mixin keyframes-fade {
   @keyframes fade {
     0% {
       opacity: 0;
     }
-
     20% {
       opacity: 1;
     }
-
     80% {
       opacity: 1;
     }
-
     100% {
       opacity: 0;
     }

@@ -120,8 +120,8 @@ const clean = () => {
 const copy = () => {
   return gulp.src([
     'src/fonts/**/*.{woff,woff2}',
-    // 'src/manifest.webmanifest',
-    // 'src/favicon.ico',
+    'src/site.webmanifest',
+    'src/favicon/*',
     // 'src/icon*.*',
     // 'src/apple-touch-icon.*',
   ], {base: 'src'})

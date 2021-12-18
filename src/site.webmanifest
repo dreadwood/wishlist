@@ -1,0 +1,11 @@
+{
+  "name": "Wishlist",
+  "short_name": "Wishlist",
+  "icons": [
+      {
+          "src": "/favicon/android-chrome-144x144.png",
+          "sizes": "144x144",
+          "type": "image/png"
+      }
+  ]
+}

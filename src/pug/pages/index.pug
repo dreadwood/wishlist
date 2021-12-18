@@ -1,16 +1,24 @@
 include ../components/head
 include ../components/images
 
+include ../components/card
+include ../components/footer
+include ../components/promo
+include ../components/quote
+include ../data/data
+
+
 doctype html
 html(lang="ru")
-  +head("Gulp templates")
-
+  +head("Wishlist by srg")
   body
-
     main
-      h1.visually-hidden Gulp templates
-
-      p Hello world!
+      +promo()
+      +quote()
+      .list
+        each item in wishlist
+          +card(item)
+      +footer()
 
     //- script(src="js/vendor.js")
     //- script(src="js/script.js")
