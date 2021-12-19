@@ -27,6 +27,7 @@ module.exports = {
       'except': ['after-same-name', 'inside-block'],
       'ignore': ['after-comment'],
     }],
+    'color-function-notation': 'legacy',
     'rule-empty-line-before': ['always', {
       'except': ['first-nested', 'inside-block-and-after-rule', 'inside-block'],
       'ignore': ['after-comment']

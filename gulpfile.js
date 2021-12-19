@@ -105,6 +105,7 @@ const server = () => {
   gulp.watch('src/**/*.pug', gulp.series(html, refresh));
   gulp.watch('src/sass/**/*.scss', gulp.series(style));
   gulp.watch('src/img/icon-*.svg', gulp.series(sprite, html, refresh));
+  gulp.watch('src/img/*.{png,jpg}', gulp.series(images, webp, refresh));
   gulp.watch('src/js/*/*.js', gulp.series(jsScript, jsVendor, refresh));
 };
 
