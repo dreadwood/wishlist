@@ -1,4 +1,6 @@
 .footer {
+  @include wrapper;
+
   padding: 40px 20px;
   font-size: 0.8rem;
   @include tablet {
